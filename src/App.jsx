@@ -10,6 +10,7 @@ import {
   StarsCanvas,
 } from "./components";
 
+
 const App = () => {
   return (
     <div className="relative z-0 bg-primary">
