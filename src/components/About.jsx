@@ -4,7 +4,8 @@ import {motion} from 'framer-motion'
 
 import {styles} from '../styles.js'
 import {services} from '../constants/index.js'
-import {fadeIn, textVariant} from '../utils/motion.js'
+import {fadeIn, textVariant} from '../utils/motion.js';
+import {SectionWrapper} from '../hoc/index.js'
 
 const ServiceCard = ({index, title, icon}) => {
   return (
@@ -35,7 +36,7 @@ const ServiceCard = ({index, title, icon}) => {
 const About = () => {
   return (
     <>
-    <div className='mt-[100px] w-[90vw] mx-auto'>
+    <div className='w-[90vw] mx-auto'>
     <motion.div variants={textVariant()}>
       <p className={styles.sectionSubText}>Introduction</p>
       <h2 className={styles.sectionHeadText}>Overview</h2>
@@ -59,4 +60,4 @@ const About = () => {
   )
 }
 
-export default About
+export default SectionWrapper(About, "about")
